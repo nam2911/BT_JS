@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JS</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+</body>
+</hr>
+<!-- Click -->
+<input id="txtUser" type="text" value="Cybersoft" />
+<button id="btnClick" class="btn btn-success">Click</button>
+<hr />
+<!-- Tính lương nhân viên -->
+<div class="container mt-5">
+  <h2>Tính tiền lương nhân viên</h2>
+  <div class="form-group row">
+    <label for="days" class="col-sm-2 col-form-label">Số ngày làm:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="soNgayLam" placeholder="Nhập số ngày làm của bạn">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-10">
+      <button class="btn btn-primary" onclick="btnTinhLuong()">Tính tiền lương</button>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="tongLuong" class="col-sm-2 col-form-label">Tiền lương:</label>
+    <div class="col-sm-10">
+      <p class="form-control" id="tongLuong"></p>
+    </div>
+  </div>
+</div>
+<hr />
+
+<!-- Tính giá trị trung bình 5 số -->
+<div class="container mt-5">
+  <h2>Nhập vào 5 số thực và tính giá trị trung bình</h2>
+  <div class="form-group row">
+    <label for="num1" class="col-sm-2 col-form-label">Số thứ nhất:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="num1" placeholder="Nhập số thứ nhất">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="num2" class="col-sm-2 col-form-label">Số thứ hai:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="num2" placeholder="Nhập số thứ hai">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="num3" class="col-sm-2 col-form-label">Số thứ ba:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="num3" placeholder="Nhập số thứ ba">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="num4" class="col-sm-2 col-form-label">Số thứ tư:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="num4" placeholder="Nhập số thứ tư">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="num5" class="col-sm-2 col-form-label">Số thứ năm:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="num5" placeholder="Nhập số thứ năm">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-10">
+      <button class="btn btn-primary" onclick="average()">Tính giá trị trung bình</button>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="result" class="col-sm-2 col-form-label">Kết quả:</label>
+    <div class="col-sm-10">
+      <p class="form-control" id="result"></p>
+    </div>
+  </div>
+</div>
+<hr />
+<!-- Chuyển đổi tiền tệ -->
+<div class="container mt-5">
+  <h2>Quy đổi tiền từ USD sang VND</h2>
+  <div class="form-group row">
+    <label for="usd" class="col-sm-2 col-form-label">Số tiền USD:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="usd" placeholder="Nhập số tiền USD bạn muốn quy đổi">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-10">
+      <button class="btn btn-primary" onclick="convert()">Quy đổi</button>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="vnd" class="col-sm-2 col-form-label">Số tiền VND:</label>
+    <div class="col-sm-10">
+      <p class="form-control" id="vnd"></p>
+    </div>
+  </div>
+</div>
+
+<hr />
+<!-- Tính diện tích và chu vi hình chữ nhật -->
+<div class="container mt-5">
+  <h2>Tính diện tích và chu vi hình chữ nhật</h2>
+  <div class="form-group row">
+    <label for="chieuDai" class="col-sm-2 col-form-label">Chiều dài:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="chieuDai" placeholder="Nhập chiều dài">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="chieuRong" class="col-sm-2 col-form-label">Chiều rộng:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="chieuRong" placeholder="Nhập chiều rộng">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-10">
+      <button class="btn btn-primary" onclick="Tinh()">Tính</button>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dienTich" class="col-sm-2 col-form-label">Diện tích:</label>
+    <div class="col-sm-10">
+      <p class="form-control" id="dienTich"></p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="chuVi" class="col-sm-2 col-form-label">Chu vi:</label>
+    <div class="col-sm-10">
+      <p class="form-control" id="chuVi"></p>
+    </div>
+  </div>
+</div>
+
+<hr />
+<!-- Tính tổng 2 ký số -->
+<div class="container mt-5">
+		<h2>Tính tổng 2 ký số</h2>
+		<div class="form-group row">
+			<label for="number" class="col-sm-2 col-form-label">Số:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="number" placeholder="Nhập số cần tính 2 ký số">
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="offset-sm-2 col-sm-10">
+				<button class="btn btn-primary" onclick="calc()">Tính tổng</button>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="sum" class="col-sm-2 col-form-label">Tổng:</label>
+			<div class="col-sm-10">
+				<p class="form-control" id="sum"></p>
+			</div>
+		</div>
+	</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="./main.js"></script>
+</body>
+
+</html>
